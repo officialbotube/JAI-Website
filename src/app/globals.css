@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* When the page language is set to Bangla, use the Hind Siliguri font as default */
+  html[lang="bn"] body {
+    font-family: 'Hind Siliguri', 'Inter', sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Premium scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #020c1b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #112240;
+    border-radius: 9999px;
+    border: 2px solid #020c1b;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4af37;
+  }
+}
+
+@layer utilities {
+  /* High-end corporate glassmorphism classes */
+  .backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -15px rgba(2, 12, 27, 0.9);
+  }
+
+  .animate-spin-slow {
+    animation: spin 15s linear infinite;
+  }
+}
